@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>let</title>
+</head>
+<body>
+	<script>
+		// 在变量声明之前不可以调用，会报错
+		//let在同一个作用域里不允许声明同一
+		 // 个变量。 
+		// 坱级作用域 
+		// 只能在坱级作用域里使用
+		// var不识别坱级作用域
+		// 会记录每次运算的值
+		var arr=[];
+		for(var i=0;i<10;i++){
+			arr[i]=function(){
+				alert(i);
+			}
+		}
+		arr[2]();//10
+		arr[5]();//10
+		var arr=[];
+		for(let i=0;i<10;i++){
+			arr[i]=function(){
+				alert(i);
+			}
+		}
+		arr[2]();//2
+		arr[5]();//5
+
+		// 块级作用域的嵌套
+		{
+    let num=10;
+  {
+      let num='a';
+      alert(num);  //a
+  }
+      // num  10
+}
+	</script>
+</body>
+</html>

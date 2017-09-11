@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内置顶层函数</title>
+</head>
+<body>
+	<script>
+	 // 1.escape()      对字符串进行编码
+
+  //   把非字母数字的字符(汉字)进行编码
+
+         let str='张艳鑫';
+        console.log(escape(str));
+
+  // 2.unescape()    对编码的字符串进行解码
+
+     console.log(unescape('%u5F20%u8273%u946B'));
+
+   // 3.Number()      
+     console.log(Number(true));  //1
+     console.log(Number('true'));  //NAN
+     console.log(Number(false));  //0
+     console.log(Number(null));  //0
+     console.log(Number(undefined));  //NAN
+     console.log(Number('00123'));  //123
+     console.log(Number("123.01.2")) //NAN
+     console.log(Number("123px")) //NAN
+     console.log(Number("abcd")) //NAN
+
+   // 4.String()      
+      console.log(String(123));
+   // 5.Boolean()     转换成布尔类型
+
+   //    0,NAN,undefineg,null,false，空字符串''
+   //    是假，其余全是真
+
+   // 6.parseInt()    将字符串转换为整型
+
+   //  以数字、空格、正负号开头的
+   //  从第一个数字开始一直到第一个非数字字符结束
+
+   // 7.parseFloat()  转换为小数
+
+   //   以数字、空格、正负号开头的
+   //  从第一个数字开始一直到第一个非数字字符结束 
+
+   // 8.isNaN()       判断一个数能否转换为数值类型，可以转化为数值类型就行。
+
+   //     不是数字返回true,是数字返回false
+
+
+
+	
+	
+	//json 方式创建 
+	let zhang={}
+	// 构造函数方式创建
+	 function person(){
+
+	 }
+	 let zhang=new person();
+	 //添加属性、方法
+	 //谁   什么   等于
+	 zhang.age=18;
+	 zhang.name='zhang';
+     //访问
+     //谁  什么
+     alert(zhang.age);
+     alert(zhang.name);
+	console.log(zhang);
+	//方法
+	  zhang.say=function(){
+	  	alert(zhang.name)
+	  }
+	console.log(zhang.say);
+	</script>
+</body>
+</html>
